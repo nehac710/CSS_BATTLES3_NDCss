@@ -1,0 +1,281 @@
+/* General body styling */
+body {
+    background: linear-gradient(135deg, #1b1b38, #2a2a5e, #000a1a);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+    color: white;
+}
+
+/* Heading section */
+.heading {
+    text-align: center;
+    color: white;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Font styling */
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* APOD section styling */
+.container {
+    text-align: center;
+    max-width: 800px;
+    color: black;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Image styling */
+.container img,
+.container iframe {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease;
+}
+
+.container img:hover {
+    transform: scale(1.05);
+}
+
+.container p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Title and Date Styling */
+/* Title styling */
+#title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem; /* Large and bold for the title */
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Explanation text */
+#explanation {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2rem;
+    color: #ddd;
+    margin: 20px 0;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    word-wrap: break-word;
+}
+
+/* Date styling */
+#date {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    color: #aaa;
+    margin-top: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* General text container styling */
+.container p {
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    word-wrap: break-word;
+}
+
+/* Add a subtle shadow to the text to improve readability */
+.container p, #title {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Spacing adjustments */
+.container {
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+    margin-top: 5%;
+}
+
+
+/* Button styling */
+/* Previous and Next buttons styling */
+button {
+    background-color: rgba(64, 64, 64, 0.8);
+    border: none;
+    border-radius: 50px; /* Making the buttons fully rounded */
+    color: rgb(255, 255, 255);
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 150px; /* Fixed width for consistency */
+    display: inline-block;
+    text-align: center;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    transform: translateY(-3px);
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+
+input {
+    background-color: rgba(64, 64, 64, 0.8);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+input:hover, input:focus {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    outline: none;
+}
+
+/* Button container */
+#buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    #buttons {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+/* Starfield container */
+.starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Pixelated stars styling */
+@keyframes moveUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes starGlow {
+    0%, 100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: moveUp 10s linear infinite, starGlow 2s ease-in-out infinite;
+}
+
+.star:nth-child(2n) {
+    width: 3px;
+    height: 3px;
+    animation: moveUp 15s linear infinite, starGlow 3s ease-in-out infinite;
+}
+
+.star:nth-child(3n) {
+    width: 1px;
+    height: 1px;
+    animation: moveUp 20s linear infinite, starGlow 4s ease-in-out infinite;
+}
+
+/* Improved responsive design */
+.container {
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .container img,
+    .container iframe {
+        margin-top: 10px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    input {
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+
+    #title {
+        font-size: 1.5rem;
+    }
+}
